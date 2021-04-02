@@ -32,6 +32,9 @@
                                             <state key="normal" title="S">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="southButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4SG-kg-4XZ"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyp-oe-Gub">
                                             <rect key="frame" x="366" y="450" width="30" height="30"/>
@@ -40,6 +43,9 @@
                                             <state key="normal" title="E">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="eastButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQ0-gX-HcW"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHv-Ve-7mw">
                                             <rect key="frame" x="25" y="450" width="30" height="30"/>
@@ -48,6 +54,9 @@
                                             <state key="normal" title="W">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="westButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="piN-Uj-Dz4"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -138,6 +147,9 @@
                                 <state key="normal" title="Action">
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSb-gz-8QI"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kyb-3Y-WOp">
                                 <rect key="frame" x="239" y="293" width="50" height="50"/>
@@ -154,6 +166,9 @@
                                 <state key="normal" title="N">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="northButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qvv-Aw-0fd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dj4-fh-Khm">
                                 <rect key="frame" x="308" y="613" width="80" height="30"/>
@@ -162,6 +177,9 @@
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8jI-sZ-tL8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -177,6 +195,19 @@
                             <constraint firstItem="Db0-vd-Ksi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yiJ-Jb-h3o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="DFc-Jv-pmI" id="QLY-oi-kaJ"/>
+                        <outlet property="armorLabel" destination="DJ2-UH-5y9" id="1S5-BH-2jo"/>
+                        <outlet property="damageLabel" destination="uuW-98-Joh" id="MJe-Pd-NCw"/>
+                        <outlet property="eastButton" destination="fyp-oe-Gub" id="N7S-ez-x4C"/>
+                        <outlet property="healthLabel" destination="BGg-gw-5Zg" id="l1R-Xx-Igx"/>
+                        <outlet property="itemImageView" destination="kyb-3Y-WOp" id="Z7Q-8Z-47K"/>
+                        <outlet property="northButton" destination="tKj-XY-fXs" id="yEt-Ru-gMr"/>
+                        <outlet property="southButton" destination="keB-GX-s5O" id="ArD-U9-k8U"/>
+                        <outlet property="storyLabel" destination="ZPq-oW-O5j" id="7Ok-g8-s4J"/>
+                        <outlet property="weaponLabel" destination="g9M-1b-G2L" id="2Yw-1m-8K9"/>
+                        <outlet property="westButton" destination="DHv-Ve-7mw" id="1lt-bd-4rj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
