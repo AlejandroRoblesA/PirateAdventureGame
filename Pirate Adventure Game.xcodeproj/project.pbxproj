@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4DBF0D261A382C000465B0 /* Weapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DBF0C261A382C000465B0 /* Weapon.m */; };
+		0F4DBF12261A39D4000465B0 /* Armor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DBF11261A39D4000465B0 /* Armor.m */; };
+		0F4DBF16261A3AC8000465B0 /* Boss.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DBF15261A3AC8000465B0 /* Boss.m */; };
+		0F4DBF1A261A3B91000465B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DBF19261A3B91000465B0 /* Character.m */; };
+		0F4DBF1E261A3CCE000465B0 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DBF1D261A3CCE000465B0 /* Tile.m */; };
 		0FE66D692614F13C0047E11E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE66D682614F13C0047E11E /* AppDelegate.m */; };
 		0FE66D6C2614F13C0047E11E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE66D6B2614F13C0047E11E /* SceneDelegate.m */; };
 		0FE66D6F2614F13C0047E11E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE66D6E2614F13C0047E11E /* ViewController.m */; };
@@ -17,6 +22,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F4DBF0B261A382C000465B0 /* Weapon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
+		0F4DBF0C261A382C000465B0 /* Weapon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Weapon.m; sourceTree = "<group>"; };
+		0F4DBF10261A39D4000465B0 /* Armor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Armor.h; sourceTree = "<group>"; };
+		0F4DBF11261A39D4000465B0 /* Armor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Armor.m; sourceTree = "<group>"; };
+		0F4DBF14261A3AC8000465B0 /* Boss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boss.h; sourceTree = "<group>"; };
+		0F4DBF15261A3AC8000465B0 /* Boss.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Boss.m; sourceTree = "<group>"; };
+		0F4DBF18261A3B91000465B0 /* Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		0F4DBF19261A3B91000465B0 /* Character.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		0F4DBF1C261A3CCE000465B0 /* Tile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		0F4DBF1D261A3CCE000465B0 /* Tile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		0FE66D642614F13C0047E11E /* Pirate Adventure Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pirate Adventure Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE66D672614F13C0047E11E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0FE66D682614F13C0047E11E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +57,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F4DBF0F261A3848000465B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F4DBF0B261A382C000465B0 /* Weapon.h */,
+				0F4DBF0C261A382C000465B0 /* Weapon.m */,
+				0F4DBF10261A39D4000465B0 /* Armor.h */,
+				0F4DBF11261A39D4000465B0 /* Armor.m */,
+				0F4DBF14261A3AC8000465B0 /* Boss.h */,
+				0F4DBF15261A3AC8000465B0 /* Boss.m */,
+				0F4DBF18261A3B91000465B0 /* Character.h */,
+				0F4DBF19261A3B91000465B0 /* Character.m */,
+				0F4DBF1C261A3CCE000465B0 /* Tile.h */,
+				0F4DBF1D261A3CCE000465B0 /* Tile.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0FE66D5B2614F13C0047E11E = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +99,7 @@
 				0FE66D6B2614F13C0047E11E /* SceneDelegate.m */,
 				0FE66D6D2614F13C0047E11E /* ViewController.h */,
 				0FE66D6E2614F13C0047E11E /* ViewController.m */,
+				0F4DBF0F261A3848000465B0 /* Model */,
 				0FE66D702614F13C0047E11E /* Main.storyboard */,
 				0FE66D732614F13D0047E11E /* Assets.xcassets */,
 				0FE66D752614F13D0047E11E /* LaunchScreen.storyboard */,
@@ -146,8 +179,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FE66D6F2614F13C0047E11E /* ViewController.m in Sources */,
+				0F4DBF1E261A3CCE000465B0 /* Tile.m in Sources */,
 				0FE66D692614F13C0047E11E /* AppDelegate.m in Sources */,
+				0F4DBF0D261A382C000465B0 /* Weapon.m in Sources */,
+				0F4DBF1A261A3B91000465B0 /* Character.m in Sources */,
+				0F4DBF12261A39D4000465B0 /* Armor.m in Sources */,
 				0FE66D7A2614F13D0047E11E /* main.m in Sources */,
+				0F4DBF16261A3AC8000465B0 /* Boss.m in Sources */,
 				0FE66D6C2614F13C0047E11E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

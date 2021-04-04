@@ -39,7 +39,7 @@
 }
 - (IBAction)southButtonPressed:(UIButton *)sender {
 }
-- (IBAction)westButtonPressed:(id)sender {
+- (IBAction)westButtonPressed:(UIButton *)sender {
 }
 - (IBAction)resetButtonPressed:(UIButton *)sender {
 }
