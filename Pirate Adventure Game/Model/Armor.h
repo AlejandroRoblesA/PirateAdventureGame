@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Armor : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (nonatomic) int healt;
+@property (nonatomic) int health;
 
 @end
 

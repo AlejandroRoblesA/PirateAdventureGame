@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString * actionButtonName;
 @property (strong, nonatomic) Weapon * weapon;
 @property (strong, nonatomic) Armor * armor;
-@property (nonatomic) int healtEffect;
+@property (nonatomic) int healthEffect;
 
 @end
 

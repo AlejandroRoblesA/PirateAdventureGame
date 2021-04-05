@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) Armor * armor;
 @property (strong, nonatomic) Weapon * weapon;
 @property (nonatomic) int damage;
-@property (nonatomic) int healt;
+@property (nonatomic) int health;
 
 @end
 

@@ -6,8 +6,16 @@
 //
 
 #import "ViewController.h"
+#import "Character.h"
+#import "Boss.h"
+#import "Factory.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) NSArray * tiles;
+@property (strong, nonatomic) Character * character;
+@property (strong, nonatomic) Boss * boss;
+@property (nonatomic) CGPoint currentPoint;
 
 @property (weak, nonatomic) IBOutlet UILabel     *healthLabel;
 @property (weak, nonatomic) IBOutlet UILabel     *damageLabel;
@@ -28,7 +36,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupGame];
+    
 }
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
@@ -42,6 +52,14 @@
 - (IBAction)westButtonPressed:(UIButton *)sender {
 }
 - (IBAction)resetButtonPressed:(UIButton *)sender {
+}
+
+-(void) setupGame{
+    self.tiles = [Factory createTiles];
+    self.character = [Factory createCharacter];
+    self.boss = [Factory createBoss];
+    
+    self.currentPoint = CGPointMake(0,0);
 }
 
 @end

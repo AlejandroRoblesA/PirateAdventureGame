@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Boss : NSObject
 
-@property (nonatomic) int healt;
+@property (nonatomic) int health;
 @property (nonatomic) int damage;
 
 @end

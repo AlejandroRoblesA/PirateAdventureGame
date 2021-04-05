@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Factory : NSObject
 
-+(Boss *) createBoos;
++(Boss *) createBoss;
 +(Character *) createCharacter;
 +(NSArray *) createTiles;
 
