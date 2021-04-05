@@ -9,6 +9,7 @@
 #import "Character.h"
 #import "Boss.h"
 #import "Factory.h"
+#import "Tile.h"
 
 @interface ViewController ()
 
@@ -60,6 +61,28 @@
     self.boss = [Factory createBoss];
     
     self.currentPoint = CGPointMake(0,0);
+    
+    [self.character calculateAttributesForArmor:nil withWeapon:nil andHealthEffect:0];
+    
+    [self updateTile];
+    [self updateButtons];
+}
+
+-(void) updateTile{
+    self.actionButton.enabled = YES;
+    
+    Tile * tileModel = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex: self.currentPoint.y];
+    self.storyLabel.text = tileModel.story;
+    self.itemImageView.image = tileModel.itemImage;
+    self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health];
+    self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
+    self.armorLabel.text = self.character.armor.name;
+    self.weaponLabel.text = self.character.weapon.name;
+    [self.actionButton setTitle:tileModel.actionButtonName forState:UIControlStateNormal];
+}
+
+-(void) updateButtons{
+    
 }
 
 @end
