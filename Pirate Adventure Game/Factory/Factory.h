@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(Boss *) createBoos;
 +(Character *) createCharacter;
-
++(NSArray *) createTiles;
 
 @end
 
