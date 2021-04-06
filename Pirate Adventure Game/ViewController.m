@@ -10,6 +10,7 @@
 #import "Boss.h"
 #import "Factory.h"
 #import "Tile.h"
+#import "GameBrain.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) Character * character;
 @property (strong, nonatomic) Boss * boss;
 @property (nonatomic) CGPoint currentPoint;
+@property (strong, nonatomic) GameBrain * gameBrain;
 
 @property (weak, nonatomic) IBOutlet UILabel     *healthLabel;
 @property (weak, nonatomic) IBOutlet UILabel     *damageLabel;
@@ -62,6 +64,8 @@
     
     self.currentPoint = CGPointMake(0,0);
     
+    self.gameBrain = [[GameBrain alloc] init];
+    
     [self.character calculateAttributesForArmor:nil withWeapon:nil andHealthEffect:0];
     
     [self updateTile];
@@ -83,6 +87,13 @@
 
 -(void) updateButtons{
     
+    self.westButton.hidden = ![self.gameBrain tileExistsAtPoint:CGPointMake(self.currentPoint.x - 1, self.currentPoint.y) forTiles:self.tiles];
+    
+    self.eastButton.hidden = ![self.gameBrain tileExistsAtPoint:CGPointMake(self.currentPoint.x + 1, self.currentPoint.y) forTiles:self.tiles];
+    
+    self.northButton.hidden = ![self.gameBrain tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y + 1) forTiles:self.tiles];
+    
+    self.southButton.hidden = ![self.gameBrain tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y - 1) forTiles:self.tiles];
 }
 
 @end

@@ -13,6 +13,7 @@
 		0F4DBF1A261A3B91000465B0 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DBF19261A3B91000465B0 /* Character.m */; };
 		0F4DBF1E261A3CCE000465B0 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DBF1D261A3CCE000465B0 /* Tile.m */; };
 		0F4DBF23261A41F3000465B0 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F4DBF22261A41F3000465B0 /* Factory.m */; };
+		0F59542D261CCAC400BD215E /* GameBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F59542C261CCAC300BD215E /* GameBrain.m */; };
 		0FE66D692614F13C0047E11E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE66D682614F13C0047E11E /* AppDelegate.m */; };
 		0FE66D6C2614F13C0047E11E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE66D6B2614F13C0047E11E /* SceneDelegate.m */; };
 		0FE66D6F2614F13C0047E11E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE66D6E2614F13C0047E11E /* ViewController.m */; };
@@ -35,6 +36,8 @@
 		0F4DBF1D261A3CCE000465B0 /* Tile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
 		0F4DBF21261A41F3000465B0 /* Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
 		0F4DBF22261A41F3000465B0 /* Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
+		0F59542B261CCAC300BD215E /* GameBrain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameBrain.h; sourceTree = "<group>"; };
+		0F59542C261CCAC300BD215E /* GameBrain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBrain.m; sourceTree = "<group>"; };
 		0FE66D642614F13C0047E11E /* Pirate Adventure Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pirate Adventure Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE66D672614F13C0047E11E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0FE66D682614F13C0047E11E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +89,15 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		0F59542A261CCAA900BD215E /* Brain */ = {
+			isa = PBXGroup;
+			children = (
+				0F59542B261CCAC300BD215E /* GameBrain.h */,
+				0F59542C261CCAC300BD215E /* GameBrain.m */,
+			);
+			path = Brain;
+			sourceTree = "<group>";
+		};
 		0FE66D5B2614F13C0047E11E = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +123,7 @@
 				0FE66D6B2614F13C0047E11E /* SceneDelegate.m */,
 				0FE66D6D2614F13C0047E11E /* ViewController.h */,
 				0FE66D6E2614F13C0047E11E /* ViewController.m */,
+				0F59542A261CCAA900BD215E /* Brain */,
 				0F4DBF20261A41D8000465B0 /* Factory */,
 				0F4DBF0F261A3848000465B0 /* Model */,
 				0FE66D702614F13C0047E11E /* Main.storyboard */,
@@ -198,6 +211,7 @@
 				0F4DBF0D261A382C000465B0 /* Weapon.m in Sources */,
 				0F4DBF1A261A3B91000465B0 /* Character.m in Sources */,
 				0F4DBF12261A39D4000465B0 /* Armor.m in Sources */,
+				0F59542D261CCAC400BD215E /* GameBrain.m in Sources */,
 				0FE66D7A2614F13D0047E11E /* main.m in Sources */,
 				0F4DBF16261A3AC8000465B0 /* Boss.m in Sources */,
 				0FE66D6C2614F13C0047E11E /* SceneDelegate.m in Sources */,
