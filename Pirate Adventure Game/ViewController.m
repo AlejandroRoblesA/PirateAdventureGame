@@ -45,16 +45,38 @@
 }
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
+    Tile * tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    [self.character calculateAttributesForArmor:tile.armor withWeapon:tile.weapon andHealthEffect:tile.healthEffect];
+    
+    [self updateTile];
+    self.actionButton.enabled = NO;
 }
 - (IBAction)northButtonPressed:(UIButton *)sender {
+    self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y + 1);
+    [self updateButtons];
+    [self updateTile];
 }
 - (IBAction)eastButtonPressed:(UIButton *)sender {
+    self.currentPoint = CGPointMake(self.currentPoint.x + 1, self.currentPoint.y);
+    [self updateButtons];
+    [self updateTile];
 }
 - (IBAction)southButtonPressed:(UIButton *)sender {
+    self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y - 1);
+    [self updateButtons];
+    [self updateTile];
 }
 - (IBAction)westButtonPressed:(UIButton *)sender {
+    self.currentPoint = CGPointMake(self.currentPoint.x - 1, self.currentPoint.y);
+    [self updateButtons];
+    [self updateTile];
 }
 - (IBAction)resetButtonPressed:(UIButton *)sender {
+    self.character = nil;
+    self.boss = nil;
+    self.tiles = nil;
+    
+    [self setupGame];
 }
 
 -(void) setupGame{
