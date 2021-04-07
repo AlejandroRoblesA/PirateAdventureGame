@@ -45,11 +45,17 @@
 }
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
-    Tile * tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
-    [self.character calculateAttributesForArmor:tile.armor withWeapon:tile.weapon andHealthEffect:tile.healthEffect];
     
-    [self updateTile];
-    self.actionButton.enabled = NO;
+    if (self.currentPoint.x == 3 && self.currentPoint.y == 2){
+        [self.gameBrain declareWinnerForCharacter: self.character andBoss: self.boss];
+    }
+    else{
+        Tile * tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+        [self.character calculateAttributesForArmor:tile.armor withWeapon:tile.weapon andHealthEffect:tile.healthEffect];
+        
+        [self updateTile];
+        self.actionButton.enabled = NO;
+    }
 }
 - (IBAction)northButtonPressed:(UIButton *)sender {
     self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y + 1);
@@ -121,11 +127,18 @@
 
 -(void) playerDidWin:(BOOL)playerWon{
     if (playerWon){
-        
+        [self showAlertWithTextForHeader:@"CONGRATULATIONS" withMessage:@"\n¡Ganste!\n"];
     }
     else{
-        
+        [self showAlertWithTextForHeader:@"YOU LOST" withMessage:@"\n¡You're dead!\n"];
     }
+}
+
+-(void) showAlertWithTextForHeader: (NSString * ) header withMessage: (NSString * ) message {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:header message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    [self presentViewController:alert animated:true completion:nil];
 }
 
 @end
