@@ -26,9 +26,11 @@
         character.health = character.health - boss.damage - bonusDamage;
         
         if (character.health <= 0){
+            [self.delegate playerDidWin: NO];
             break;
         }
         else if (boss.health <= 0){
+            [self.delegate playerDidWin: YES];
             break;
         }
     }

@@ -12,10 +12,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol GameBrainDelegate <NSObject>
+
+@required
+-(void) playerDidWin: (BOOL) playerWon;
+
+@end
+
 @interface GameBrain : NSObject
 
 -(BOOL) tileExistsAtPoint: (CGPoint) point forTiles: (NSArray *) tiles;
 -(void) declareWinnerForCharacter: (Character * ) character andBoss: (Boss * ) boss;
+
+@property (nonatomic, weak) id <GameBrainDelegate> delegate;
 
 @end
 

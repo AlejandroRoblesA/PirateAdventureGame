@@ -12,7 +12,7 @@
 #import "Tile.h"
 #import "GameBrain.h"
 
-@interface ViewController ()
+@interface ViewController () <GameBrainDelegate>
 
 @property (strong, nonatomic) NSArray * tiles;
 @property (strong, nonatomic) Character * character;
@@ -87,6 +87,7 @@
     self.currentPoint = CGPointMake(0,0);
     
     self.gameBrain = [[GameBrain alloc] init];
+    self.gameBrain.delegate = self;
     
     [self.character calculateAttributesForArmor:nil withWeapon:nil andHealthEffect:0];
     
@@ -116,6 +117,15 @@
     self.northButton.hidden = ![self.gameBrain tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y + 1) forTiles:self.tiles];
     
     self.southButton.hidden = ![self.gameBrain tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y - 1) forTiles:self.tiles];
+}
+
+-(void) playerDidWin:(BOOL)playerWon{
+    if (playerWon){
+        
+    }
+    else{
+        
+    }
 }
 
 @end
