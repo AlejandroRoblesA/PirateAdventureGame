@@ -13,6 +13,7 @@
 +(Boss *) createBoss{
     Boss * boss = [[Boss alloc] init];
     boss.health = 65;
+    boss.damage = 15;
     return boss;
 }
 
